@@ -463,8 +463,9 @@ for (i,w) in zip(yhat,testy)
     if i == w
         score += 1
     end
-    end
 end
 acc = score / n
+    return(acc)
+end
 #---------------------------
 end
