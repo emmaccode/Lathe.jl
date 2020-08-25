@@ -1,30 +1,4 @@
-#==
-Majority
-    Class
-        Baseline
-==#
-@doc """
-      Majority class baseline is used to find the most often interpreted
-      classification in an array.\n
-      --------------------\n
-      ==PARAMETERS==\n
-     [y] <- Fill with your trainY values. Should be an array of shape (0,1) or (1,0)\n
-     --------------------\n
-     ==Functions==\n
-     predict(xt) <- Returns a prediction from the model based on the xtrain value passed (xt)\n
-     counts() <- Returns a dictionary with the counts of all inserted keys.\n
-     highest() <- Will return a Dictionary key with the count as well as the value for the most interpreted classification.
-       """
-function majClassBaseline(y)
-    u=unique(y)
-    d=Dict([(i,count(x->x==i,y)) for i in u])
-    d = sort(collect(d), by=x->x[2])
-    maxkey = d[length(d)]
-    predict(xt) = [p = maxkey[1] for p in xt]
-    counts() = d
-    highest() = maxkey
-    (var)->(y;maxkey;d;predict;counts;highest)
-end
+
 #==
 Logistic
     Regression
